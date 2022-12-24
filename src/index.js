@@ -43,10 +43,10 @@ function onSubmit(e) {
     })   
   }
 
-  function getImg(inputEl) {
+  async function getImg(inputEl) {
     const urlAPI = `https://pixabay.com/api/?key=${API_KEY}&q=${inputEl}&image_type=photo&orientation=horizontal&safesearch=true&page=${currentPage}&per_page=${perPage}`;
-    return fetch(urlAPI)
-        .then(response => response.json())
+    const response = await fetch(urlAPI)
+        return response.json()
   }
 
   function createImgs(hits) { 
