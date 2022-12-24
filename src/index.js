@@ -1,5 +1,8 @@
 import './css/styles.css';
 import Notiflix from 'notiflix';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
 
 const API_KEY = '32131484-434bcc2deb94b7a5b14c43765';
 
@@ -23,6 +26,9 @@ loadMoreBtn.style.display = 'none';
 searchForm.addEventListener('submit', onSubmit)
 loadMoreBtn.addEventListener('click', onLoadMoreBtn)
 
+// const lightbox = new SimpleLightbox('.photo-card a', { 
+//     captionDelay: 250,
+//  })
 let inputEl = '';
 
 function onSubmit(e) {
