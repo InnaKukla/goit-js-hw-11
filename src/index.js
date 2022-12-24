@@ -1,7 +1,7 @@
+// import SimpleLightbox from "simplelightbox";
+// import "simplelightbox/dist/simple-lightbox.min.css";
 import './css/styles.css';
 import Notiflix from 'notiflix';
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const API_KEY = '32131484-434bcc2deb94b7a5b14c43765';
@@ -26,8 +26,9 @@ loadMoreBtn.style.display = 'none';
 searchForm.addEventListener('submit', onSubmit)
 loadMoreBtn.addEventListener('click', onLoadMoreBtn)
 
-// const lightbox = new SimpleLightbox('.photo-card a', { 
+// const lightbox = new SimpleLightbox('.gallery a', { 
 //     captionDelay: 250,
+//     close: false,
 //  })
 let inputEl = '';
 
@@ -40,8 +41,8 @@ function onSubmit(e) {
     getImg(inputEl)
     .then(({hits, totalHits}) => {
       if (hits.length > 0) {
-      createImgs(hits) 
-      Notiflix.Notify.success(`"Hooray! We found ${totalHits} images."`)
+      createImgs(hits)
+      Notiflix.Notify.success(`"Hooray! We found ${totalHits} images."`);
       loadMoreBtn.style.display = 'block';
       } else {
         Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.")
