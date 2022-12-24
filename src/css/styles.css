@@ -12,9 +12,58 @@ body {
   line-height: 1.5;
 }
 
+header{
+  width: 100vw;
+  padding: 20px;
+  background-color: dimgrey;
+  display: flex;
+  opacity: 75%;
+}
+.search-form{
+  margin: 0 auto;
+}
+
 #search-box {
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+
+.info{
+  display: flex;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px 15px;
+}
+.photo-card{
+  border-radius: 4px;
+  border: 1px solid rgb(117,110, 110);
+  margin-right: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo-card img{
+  max-width: 100%;
+}
+.info-item{
+  margin-left: 5px;
+}
+.info-item:last-child{
+  margin-left: 0px;
+}
+nav{
+  display: flex;
+  padding: 10px;
+}
+
+.load-more{
+  margin: 0 auto;
 }
