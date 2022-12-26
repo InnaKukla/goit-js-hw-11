@@ -96,8 +96,8 @@
 
 import './css/styles.css';
 import Notiflix from 'notiflix';
-// const axios = require('axios');
-import axios from 'axios';
+const axios = require('axios');
+// import axios from 'axios';
 
 
 const API_KEY = '32131484-434bcc2deb94b7a5b14c43765';
