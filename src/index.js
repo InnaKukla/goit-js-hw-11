@@ -11,7 +11,6 @@ const perPage = 40;
 let totalPages = undefined;
 let currentPage = 1;
 
-
 const searchForm = document.querySelector('#search-form')
 const inputSearch = document.querySelector('input');
 const galleryContainer = document.querySelector('.gallery');
